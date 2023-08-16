@@ -58,6 +58,6 @@ var objeto = {}
 }
 
 const getUsers = () =>{
-        
+        return user2
 }
 export { getUsers, getUserAuthenticated };
