@@ -1,11 +1,7 @@
 'use server'
 
-const getUserAuthenticated = (user) => {
 
-     
-}
-
-const user = [{
+const user2 = [{
     name:"Filipe",
     email:"filipelima@gmail.com",
     password:"123lipe",
@@ -44,6 +40,22 @@ const user = [{
 }
 ]
 
+const getUserAuthenticated = (user) => {
+var objeto = {}
+
+    user2.map((users) => {
+        if ( user.email == users.email && user.password == users.password) {
+            objeto = users
+        }
+        
+    } )
+
+    return objeto
+
+    //primeiro chamar a const user
+    //depois add a funcao map
+    // user seria o input e users o que ta na lista
+}
 
 const getUsers = () =>{
         
