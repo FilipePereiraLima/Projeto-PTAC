@@ -1,18 +1,25 @@
-import { getUsers } from "@/app/functions/handlerAcessAPI";
-import { Suspense } from "react";
-import ListUsers from "@/app/components/listUsers";
+'use client'
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
+export default function Login() {
 
-export default async function Dashboard() {
+    const handlerChange = async (e) => {
+        e.preventDefault();
 
-    var mostraUsuario = getUsers()
- 
-     return (
-         <div>
-            <Suspense fallback={<p>Loading...</p>}>
-                 <ListUsers users={mostraUsuario}/>
- 
-             </Suspense>
-         </div>
-     );
- };
+        toast.success("Usuario Cadastrado!");
+    }
+    return (
+        <div>
+            <h1>Cadastrar Usuario</h1>
+            <form onSubmit={handlerChange}>
+
+                <input placeholder='E-mail' type="email" required></input>
+                <input placeholder='Senha' type='password' required></input>
+
+                <button>Cadastrar</button>
+                <ToastContainer />
+            </form>
+        </div>
+    )
+}
