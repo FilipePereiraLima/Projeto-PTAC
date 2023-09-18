@@ -5,14 +5,14 @@ import ListUsers from "@/app/components/listUsers";
 
 export default async function Dashboard() {
 
-   var mostraUsuario = getUsers()
-
-    return (
-        <div>
-           <Suspense fallback={<p>Loading...</p>}>
-                <ListUsers users={mostraUsuario}/>
-
-            </Suspense>
-        </div>
-    );
-};
+    var mostraUsuario = getUsers()
+ 
+     return (
+         <div>
+            <Suspense fallback={<p>Loading...</p>}>
+                 <ListUsers users={mostraUsuario}/>
+ 
+             </Suspense>
+         </div>
+     );
+ };

@@ -26,7 +26,7 @@ export default function Login() {
   }
   return (
     <div>
-      <h1>Login</h1>
+      <h1>Alterar</h1>
       <form onSubmit={handlerLogin}>
         <input
           placeholder='E-mail'

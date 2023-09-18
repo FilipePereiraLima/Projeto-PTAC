@@ -20,10 +20,21 @@ export const middleware = (request) => {
             return NextResponse.redirect(urlDashboard)
         }
     }
+    if (!isTokenValidated || !token) {
+        if (request.nextUrl.pathname === '/pages/dashboard/alter') {
+            return NextResponse.redirect(urlLogin);
+        }
+    }
+    if (!isTokenValidated || !token) {
+        if (request.nextUrl.pathname === '/pages/dashboard/register') {
+            return NextResponse.redirect(urlLogin);
+        }
+    }
+
     
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard']
+    matcher: ['/', '/pages/dashboard', '/pages/dashboard/alter', '/pages/dashboard/register']
 };
 
