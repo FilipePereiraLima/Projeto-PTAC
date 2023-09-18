@@ -1,42 +1,34 @@
 'use client'
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
-  const [user, setUser] = useState({
-    email: '',
-    password: '',
-  });
-  const { push, refresh } = useRouter();
+  
 
-  const handlerLogin = async (e) => {
+  
+   
+    
+
+  const handlerChange = async (e) => {
     e.preventDefault();
-    try {
-      const userAuth = await handlerAcessUser(user);
-      if(userAuth.token === undefined){
-        toast.error("Erro no email ou senha!");
-      }
-
-      push('/pages/dashboard');
-    } catch {
-      refresh();
-    }
+   
+        toast.success("Usuario Alterado!");
+          
   }
   return (
     <div>
       <h1>Alterar</h1>
-      <form onSubmit={handlerLogin}>
+      <form onSubmit={handlerChange}>
         <input
           placeholder='E-mail'
           type="email"
-          onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
+          required          >
         </input>
         <input
           placeholder='Senha'
           type='password'
-          onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
+          required          >
         </input>
         <button>Entrar</button>
         <ToastContainer/>
