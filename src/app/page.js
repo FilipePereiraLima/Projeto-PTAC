@@ -33,7 +33,7 @@ export default function Login() {
 
       <section className={styles.section}>
       <div className={styles.divform}>
-        <h1 className={styles.h1}>Login</h1>
+        <h1 className={styles.h1login}>Login</h1>
         <form onSubmit={handlerLogin}>
           <input
             placeholder='E-mail'
