@@ -2,10 +2,10 @@
 
 .body {
     background-color: rgb(37, 54, 67);
-    
+
 }
 
-.centernav{
+.centernav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,6 +54,7 @@
     border-bottom: 2px solid #ffd71a;
     outline: 0;
 }
+
 .iptnome {
     width: 26vw;
     height: 5vh;
@@ -64,7 +65,7 @@
     outline: 0;
 }
 
-.h1login{
+.h1login {
     margin-left: 8rem;
     margin-top: 3rem;
     font-family: 'Abril Fatface';
@@ -119,35 +120,8 @@
     color: #ffffff;
 
 }
-.alista{
-    text-decoration: underline;
-    text-decoration: teal;
-    border-radius: 2px;
-    border-color: teal;
-    text-transform: uppercase;
-    font: bold;
-    font-size: 15px;
-    letter-spacing: 0.025em;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin-right: 2rem;
-    color: #ffffff;
-}
-.aalterar{
-    text-decoration: underline;
-    text-decoration: teal;
-    border-radius: 2px;
-    border-color: teal;
-    text-transform: uppercase;
-    font: bold;
-    font-size: 15px;
-    letter-spacing: 0.025em;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin-right: 2rem;
-    color: #ffffff;
-}
-.aregister{
+
+.alista {
     text-decoration: underline;
     text-decoration: teal;
     border-radius: 2px;
@@ -162,9 +136,80 @@
     color: #ffffff;
 }
 
-.section{
+.aalterar {
+    text-decoration: underline;
+    text-decoration: teal;
+    border-radius: 2px;
+    border-color: teal;
+    text-transform: uppercase;
+    font: bold;
+    font-size: 15px;
+    letter-spacing: 0.025em;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 2rem;
+    color: #ffffff;
+}
+
+.aregister {
+    text-decoration: underline;
+    text-decoration: teal;
+    border-radius: 2px;
+    border-color: teal;
+    text-transform: uppercase;
+    font: bold;
+    font-size: 15px;
+    letter-spacing: 0.025em;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 2rem;
+    color: #ffffff;
+}
+
+.section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+
+.divcard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 16px;
+}
+
+.plist {
+    color: #ffffff;
+}
+
+.suspense {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+}
+
+.card {
+    background-color: #515e69;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(255, 255, 255, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 150px;
+    transition: all 0.3s ease-out;
+    border-left: 2px solid #ffd71a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card p {
+    color: #a3a5ae;
+    font-size: 16px;
 }

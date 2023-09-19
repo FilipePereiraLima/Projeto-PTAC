@@ -5,15 +5,15 @@ import styles from '../../../../page.module.css'
 
 export default function Login() {
 
-    const handlerChange = async (e) => {
-        e.preventDefault();
+  const handlerChange = async (e) => {
+    e.preventDefault();
 
-        toast.success("Usuario Cadastrado!");
-    }
-    return (
-        <body className={styles.body}>
-            
-            <div className={styles.centernav} >
+    toast.success("Usuario Cadastrado!");
+  }
+  return (
+    <body className={styles.body}>
+
+      <div className={styles.centernav} >
         <nav className={styles.nav}>
           <div className={styles.navdiv}>
             <a className={styles.alogin} href="/">
@@ -34,17 +34,17 @@ export default function Login() {
 
       <section className={styles.section}>
         <div className={styles.divform}>
-            <h1 className={styles.h1registrar}>Registrar</h1>
-            <form onSubmit={handlerChange}>
-                <input className={styles.iptnome} placeholder='Name' type="text" required></input>
-                <input className={styles.iptemail} placeholder='E-mail' type="email" required></input>
-                <input className={styles.iptsenha} placeholder='Senha' type='password' required></input>
+          <h1 className={styles.h1registrar}>Registrar</h1>
+          <form onSubmit={handlerChange}>
+            <input className={styles.iptnome} placeholder='Name' type="text" required></input>
+            <input className={styles.iptemail} placeholder='E-mail' type="email" required></input>
+            <input className={styles.iptsenha} placeholder='Senha' type='password' required></input>
 
-                <button className={styles.button}>Cadastrar</button>
-                <ToastContainer />
-            </form>
+            <button className={styles.button}>Cadastrar</button>
+            <ToastContainer />
+          </form>
         </div>
-        </section>
-        </body>
-    )
+      </section>
+    </body>
+  )
 }
