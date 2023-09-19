@@ -14,7 +14,7 @@ export default function Login() {
   }
   return (
 
-    <body className={styles.bodyalter}>
+    <body className={styles.body}>
 
       <div className={styles.centernav} >
         <nav className={styles.nav}>
@@ -37,7 +37,7 @@ export default function Login() {
 
       <section className={styles.section}>
         <div className={styles.divform}>
-          <h1 className={styles.h1}>Alterar</h1>
+          <h1 className={styles.h1alterar}>Alterar</h1>
           <form onSubmit={handlerChange}>
             <input className={styles.iptnome} placeholder='Name' type="text" required></input>
             <input className={styles.iptemail} placeholder='E-mail' type="email" required></input>

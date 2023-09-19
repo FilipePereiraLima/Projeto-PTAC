@@ -28,6 +28,10 @@ export default function Login() {
   }
   return (
     <body className={styles.body}>
+
+
+
+      <section className={styles.section}>
       <div className={styles.divform}>
         <h1 className={styles.h1}>Login</h1>
         <form onSubmit={handlerLogin}>
@@ -49,6 +53,7 @@ export default function Login() {
           <ToastContainer />
         </form>
         </div>
+        </section>
     </body>
   )
 }

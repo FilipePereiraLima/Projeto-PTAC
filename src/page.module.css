@@ -2,14 +2,6 @@
 
 .body {
     background-color: rgb(37, 54, 67);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.bodyalter {
-    background-color: rgb(37, 54, 67);
     
 }
 
@@ -72,8 +64,24 @@
     outline: 0;
 }
 
-.h1 {
+.h1login{
+    margin-left: 8rem;
+    margin-top: 3rem;
+    font-family: 'Abril Fatface';
+    font-size: 40px;
+    color: rgb(37, 54, 67);
+}
+
+.h1alterar {
     margin-left: 7rem;
+    margin-top: 3rem;
+    font-family: 'Abril Fatface';
+    font-size: 40px;
+    color: rgb(37, 54, 67);
+}
+
+.h1registrar {
+    margin-left: 5.5rem;
     margin-top: 3rem;
     font-family: 'Abril Fatface';
     font-size: 40px;
