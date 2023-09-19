@@ -14,38 +14,43 @@ export default function Login() {
   }
   return (
 
-   <div >
-<div>
+    <body className={styles.bodyalter}>
 
-<nav className={styles.nav}>
-     <div className="-mb-px flex justify-center">
-         <a className="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
-             Home
-         </a>
-         <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
-             Products
-         </a>
-         <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
-             Discounts
-         </a>
-         <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3" href="#">
-             Customers
-         </a>
-     </div>
-</nav>
+      <div className={styles.centernav} >
+        <nav className={styles.nav}>
+          <div className={styles.navdiv}>
+            <a className={styles.alogin} href="/">
+              Login
+            </a>
+            <a className={styles.alista} href="/pages/dashboard">
+              Lista
+            </a>
+            <a className={styles.aalterar} href="/pages/dashboard/alter">
+              Alterar
+            </a>
+            <a className={styles.aregister} href="/pages/dashboard/register">
+              Registrar
+            </a>
+          </div>
+        </nav>
+      </div>
 
-</div>
-    
+      <section className={styles.section}>
+        <div className={styles.divform}>
+          <h1 className={styles.h1}>Alterar</h1>
+          <form onSubmit={handlerChange}>
+            <input className={styles.iptnome} placeholder='Name' type="text" required></input>
+            <input className={styles.iptemail} placeholder='E-mail' type="email" required></input>
+            <input className={styles.iptsenha} placeholder='Senha' type='password' required></input>
 
-      <h1>Alterar</h1>
-      <form onSubmit={handlerChange}>
-        <input  placeholder='Name' type="text" required></input>
-        <input placeholder='E-mail' type="email" required></input>
-        <input placeholder='Senha' type='password' required></input>
+            <button className={styles.button}>Alterar</button>
+            <ToastContainer />
+          </form>
 
-        <button>Alterar</button>
-        <ToastContainer />
-      </form>
-    </div>
+        </div>
+      </section>
+
+
+    </body >
   )
 }
