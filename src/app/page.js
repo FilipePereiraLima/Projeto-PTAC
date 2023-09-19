@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const userAuth = await handlerAcessUser(user);
-      if(userAuth.token === undefined){
+      if (userAuth.token === undefined) {
         toast.error("Erro no email ou senha!");
       }
 
@@ -27,28 +27,28 @@ export default function Login() {
     }
   }
   return (
-    <body  className={styles.body}>
-    <div className={styles.divform}>
-      <h1 className={styles.h1}>Login</h1>
-      <form onSubmit={handlerLogin}>
-        <input
-          placeholder='E-mail'
-          type="email"
-          onChange={(e) => { setUser({ ...user, email: e.target.value }) }}
-          className={styles.iptemail}>
-           
-        </input>
-        <input
-          placeholder='Senha'
-          type='password'
-          onChange={(e) => { setUser({ ...user, password: e.target.value }) }}
-          className={styles.iptsenha}>
-            
-        </input>
-        <button className={styles.button} >Entrar</button>
-        <ToastContainer/>
-      </form>
-    </div>
+    <body className={styles.body}>
+      <div className={styles.divform}>
+        <h1 className={styles.h1}>Login</h1>
+        <form onSubmit={handlerLogin}>
+          <input
+            placeholder='E-mail'
+            type="email"
+            onChange={(e) => { setUser({ ...user, email: e.target.value }) }}
+            className={styles.iptemail}>
+
+          </input>
+          <input
+            placeholder='Senha'
+            type='password'
+            onChange={(e) => { setUser({ ...user, password: e.target.value }) }}
+            className={styles.iptsenha}>
+
+          </input>
+          <button className={styles.button} >Entrar</button>
+          <ToastContainer />
+        </form>
+        </div>
     </body>
   )
 }

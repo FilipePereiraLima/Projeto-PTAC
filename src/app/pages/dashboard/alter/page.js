@@ -11,10 +11,10 @@ export default function Login() {
 
   }
   return (
-    <div>
+    <div >
       <h1>Alterar</h1>
       <form onSubmit={handlerChange}>
-        <input placeholder='Name' type="text" required></input>
+        <input  placeholder='Name' type="text" required></input>
         <input placeholder='E-mail' type="email" required></input>
         <input placeholder='Senha' type='password' required></input>
 
