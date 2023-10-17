@@ -1,5 +1,28 @@
 'use server'
 
+const url = "https://aula-17-10-gamma-nine.vercel.app";
+const getUserAuthenticated = async (user) => {
+    const responseOfApi = await fetch(url + "/user/authenticated",
+        {
+            method:"POST",
+            headers:{"Content-type":"Application/json"},
+            body: JSON.stringify(user),
+        }
+    );
+    const userAuth = await responseOfApi.json();
+    return userAuth;
+}
+
+
+const getUsers = async () =>{
+        
+}
+
+export { getUsers, getUserAuthenticated };
+
+
+
+/*
 
 const user2 = [{
     name:"Filipe",
@@ -64,7 +87,5 @@ var objeto = {}
     // user seria o input e users o que ta na lista
 }
 
-const getUsers = () =>{
-        return user2
-}
-export { getUsers, getUserAuthenticated };
+
+*/
