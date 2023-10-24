@@ -6,7 +6,10 @@ import styles from '../../../page.module.css'
 
 export default async function Dashboard() {
 
-    var mostraUsuario = getUsers()
+    const listar = await fetch("https://aula-17-10-gamma-nine.vercel.app/users", {
+    cache: "no-cache"
+  });
+    const mostraUsuario = await listar.json();
 
     return (
         <body className={styles.body}>
