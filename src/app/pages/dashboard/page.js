@@ -6,11 +6,7 @@ import styles from '../../../page.module.css'
 
 export default async function Dashboard() {
 
-    const listar = await fetch("https://aula-17-10-gamma-nine.vercel.app/users", {
-    cache: "no-cache"
-  });
-    const mostraUsuario = await listar.json();
-
+    const listar = await getUsers();
     return (
         <body className={styles.body}>
 
@@ -37,7 +33,7 @@ export default async function Dashboard() {
                 <Suspense fallback={<p className={styles.suspense}>Loading...</p>}>
 
 
-                    <ListUsers users={mostraUsuario} />
+                    <ListUsers users={listar} />
 
                 </Suspense>
             </div>
